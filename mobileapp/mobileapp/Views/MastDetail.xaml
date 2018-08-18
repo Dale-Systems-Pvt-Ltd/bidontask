@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                  prism:ViewModelLocator.AutowireViewModel="True"
+                  x:Class="mobileapp.Views.MastDetail">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" WidthRequest="250">
+            <StackLayout WidthRequest="250">
+                <Grid HeightRequest="200">
+                    <Image Source="sidemenuheader.png" Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Image>
+                    <Frame Padding="0" WidthRequest="100" HeightRequest="100" CornerRadius="50" OutlineColor="Black" 
+                           HorizontalOptions="Start" VerticalOptions="Center" Margin="10" IsClippedToBounds="True">
+                        <Image Source="userprofile.png" Aspect="AspectFill"></Image>
+                    </Frame>
+                </Grid>
+                
+                <ScrollView>
+                    <StackLayout>
+                        <StackLayout Padding="5, 15">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="Dashboard"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                            <StackLayout Padding="20, 0, 10, 0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label FontFamily="{StaticResource material}" Text="dashboard" FontSize="30"></Label>
+                                <Label VerticalOptions="Center" InputTransparent="True" Text="Dashboard" FontSize="Medium" HorizontalOptions="FillAndExpand"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Padding="5, 15">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="Dashboard"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                            <StackLayout Padding="20, 0, 10, 0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label FontFamily="{StaticResource material}" Text="note_add" FontSize="30"></Label>
+                                <Label VerticalOptions="Center" InputTransparent="True" Text="Post a task" FontSize="Medium" HorizontalOptions="FillAndExpand"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Padding="5, 15">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="Dashboard"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                            <StackLayout Padding="20, 0, 10, 0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label FontFamily="{StaticResource material}" Text="assignment" FontSize="30"></Label>
+                                <Label VerticalOptions="Center" InputTransparent="True" Text="My tasks" FontSize="Medium" 
+                                       HorizontalOptions="FillAndExpand"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Padding="5, 15">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="Dashboard"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                            <StackLayout Padding="20, 0, 10, 0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label FontFamily="{StaticResource material}" Text="find_in_page" FontSize="30"></Label>
+                                <Label VerticalOptions="Center" InputTransparent="True" Text="Browse" FontSize="Medium" HorizontalOptions="FillAndExpand"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Padding="5, 15">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="Dashboard"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                            <StackLayout Padding="20, 0, 10, 0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label FontFamily="{StaticResource material}" Text="email" FontSize="30"></Label>
+                                <Label VerticalOptions="Center" InputTransparent="True" Text="Messages" FontSize="Medium" HorizontalOptions="FillAndExpand"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Padding="5, 15">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="Dashboard"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                            <StackLayout Padding="20, 0, 10, 0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label FontFamily="{StaticResource material}" Text="settings" FontSize="30"></Label>
+                                <Label VerticalOptions="Center" InputTransparent="True" Text="Settings" FontSize="Medium" HorizontalOptions="FillAndExpand"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Padding="5, 15">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="ForgotPassword"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                            <StackLayout Padding="20, 0, 10, 0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label FontFamily="{StaticResource material}" Text="security" FontSize="30"></Label>
+                                <Label VerticalOptions="Center" InputTransparent="True" Text="Forgot Password" FontSize="Medium" HorizontalOptions="FillAndExpand"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Padding="5, 15">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="Login"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                            <StackLayout Padding="20, 0, 10, 0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label FontFamily="{StaticResource material}" Text="exit_to_app" FontSize="30"></Label>
+                                <Label VerticalOptions="Center" InputTransparent="True" Text="Sign Out" FontSize="Medium" HorizontalOptions="FillAndExpand"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+                
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    
+</MasterDetailPage>

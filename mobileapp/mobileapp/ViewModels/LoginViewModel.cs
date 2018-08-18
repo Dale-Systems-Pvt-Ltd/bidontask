@@ -9,12 +9,20 @@ namespace mobileapp.ViewModels
 {
 	public class LoginViewModel : ViewModelBase
 	{
+        public DelegateCommand SignInCommand { get; }
         public DelegateCommand GotoForgotPasswordCommand { get; }
         public DelegateCommand GotoRegisterUserCommand { get; }
         public LoginViewModel(INavigationService navigationService): base(navigationService)
         {
+            SignInCommand = new DelegateCommand(SignIn);
             GotoForgotPasswordCommand = new DelegateCommand(GotoForgotPassoword);
             GotoRegisterUserCommand = new DelegateCommand(GotoRegisterUser);
+            
+        }
+
+        private async void SignIn()
+        {
+            await NavigationService.NavigateAsync("/MastDetail/NavigationPage/Dashboard", useModalNavigation: false);
         }
 
         private async void GotoRegisterUser()

@@ -26,7 +26,8 @@ namespace mobileapp.ViewModels
 
         private async void GotoLogin()
         {
-            await NavigationService.NavigateAsync("/NavigationPage/Login");
+            //await NavigationService.NavigateAsync("/NavigationPage/Login");
+            await NavigationService.NavigateAsync("/MastDetail");
         }
 
         private string headerIcon = Utils.MaterialIcons.thumb_up.ToString();

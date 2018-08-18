@@ -41,6 +41,9 @@ namespace mobileapp
             containerRegistry.RegisterForNavigation<RegisterUserConfirmMobile>();
             containerRegistry.RegisterForNavigation<SetProfilePicture>();
             containerRegistry.RegisterForNavigation<WorkerProfile>();
+            containerRegistry.RegisterForNavigation<MastDetail>();
+            containerRegistry.RegisterForNavigation<Dashboard>();
+            
         }
     }
 }
