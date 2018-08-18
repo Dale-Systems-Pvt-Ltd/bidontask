@@ -6,43 +6,72 @@
              x:Class="mobileapp.Views.WorkerProfile" Title="{Binding Title}">
     <ContentPage.Content>
         <StackLayout Margin="10">
-            <Frame HasShadow="True" CornerRadius="5">
+            <ScrollView VerticalOptions="FillAndExpand">
                 <StackLayout>
-                    <Label Text="Tagline"></Label>
-                    <Entry Placeholder="Enter your tag line"></Entry>
-                </StackLayout>
-            </Frame>
-            <Frame HasShadow="True" CornerRadius="5">
-                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                    <StackLayout HorizontalOptions="FillAndExpand">
-                        <Label Text="Skills"></Label>
-                        <Label Text="Certified plumber" FontSize="Micro"></Label>
-                        <Label Text="Repairs Kitchen sink leakages, bathroom fittings, garden piping and more" FontSize="Micro"></Label>
-                    </StackLayout>
-                    <Label FontFamily="{StaticResource material}" FontSize="Large" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" 
+                    <Frame HasShadow="True" CornerRadius="5">
+                        <StackLayout>
+                            <Label FontSize="Micro" Text="Tagline"></Label>
+                            <Entry Placeholder="Enter your tag line"></Entry>
+                            
+                            <Label FontSize="Micro" Text="Company Name"></Label>
+                            <Entry Placeholder="Enter Company Name"></Entry>
+                        </StackLayout>
+                    </Frame>
+                    <Frame HasShadow="True" CornerRadius="5">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Label Text="Skills"></Label>
+                                <Label Text="Certified plumber" FontSize="Micro"></Label>
+                                <Label Text="Repairs Kitchen sink leakages, bathroom fittings, garden piping and more" FontSize="Micro"></Label>
+                            </StackLayout>
+                            <Label FontFamily="{StaticResource material}" FontSize="Large" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" 
                            Text="{Binding NavigateNextIcon}"></Label>
-                </StackLayout>                
-            </Frame>
-            <Frame HasShadow="True" CornerRadius="5">
-                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                    <StackLayout HorizontalOptions="FillAndExpand">
-                        <Label Text="Specialty/Area of expertize"></Label>
-                        <Label Text="Tap here to update your specialty/area of expertize details" FontSize="Micro"></Label>                        
-                    </StackLayout>
-                    <Label FontFamily="{StaticResource material}" FontSize="Large" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" 
+                        </StackLayout>
+                    </Frame>
+                    <Frame HasShadow="True" CornerRadius="5">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Label Text="Specialty/Area of expertize"></Label>
+                                <Label Text="Tap here to update your specialty/area of expertize details" FontSize="Micro"></Label>
+                            </StackLayout>
+                            <Label FontFamily="{StaticResource material}" FontSize="Large" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" 
                            Text="{Binding NavigateNextIcon}"></Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame HasShadow="True" CornerRadius="5">
+                        <StackLayout>
+                            <Label Text="Images"></Label>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Image Aspect="AspectFill" Source="work1.jpg" HeightRequest="150" HorizontalOptions="FillAndExpand"></Image>
+                                <Image Aspect="AspectFill" Source="work2.jpg" HeightRequest="150" HorizontalOptions="FillAndExpand"></Image>
+                                <Image Aspect="AspectFill" Source="work3.jpg" HeightRequest="150" HorizontalOptions="FillAndExpand"></Image>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <Frame HasShadow="True" CornerRadius="5">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Label Text="Search Tags"></Label>
+                                <Label Text="Plumbing, Leakage, Tap fitting" FontSize="Micro"></Label>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                    <Label FontFamily="{StaticResource material}" FontSize="Large"  
+                                    Text="{Binding CheckboxIcon}"></Label>
+                                    <Label Text="Notify me when task posted matching my search tags"></Label>
+                                </StackLayout>
+                                
+                            </StackLayout>
+                            <Label FontFamily="{StaticResource material}" FontSize="Large" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" 
+                                Text="{Binding NavigateNextIcon}"></Label>
+                            
+                        </StackLayout>
+                    </Frame>
                 </StackLayout>
-            </Frame>
-            <Frame HasShadow="True" CornerRadius="5">
-                <StackLayout>
-                    <Label Text="Images"></Label>
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                        <Image Aspect="AspectFill" Source="userprofile2.png" HeightRequest="150" HorizontalOptions="FillAndExpand"></Image>
-                        <Image Aspect="AspectFill" Source="userprofile2.png" HeightRequest="150" HorizontalOptions="FillAndExpand"></Image>
-                        <Image Aspect="AspectFill" Source="userprofile2.png" HeightRequest="150" HorizontalOptions="FillAndExpand"></Image>                        
-                    </StackLayout>
+            </ScrollView>
+            <StackLayout VerticalOptions="End" >
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Button HorizontalOptions="FillAndExpand" BackgroundColor="{Binding DarkPrimaryColor}" Text="Save and Sign-In" Command="{Binding GotoLoginCommand}"></Button>
                 </StackLayout>
-            </Frame>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

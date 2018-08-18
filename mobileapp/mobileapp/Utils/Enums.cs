@@ -7,6 +7,7 @@ namespace mobileapp.Utils
     public enum MaterialIcons
     {
         add_a_photo= '\ue439',
+        check_box = '\ue834',
         email = '\ue0Be',
         monetization_on = '\ue263',
         my_location = '\ue406',

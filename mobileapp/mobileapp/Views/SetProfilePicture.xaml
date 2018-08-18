@@ -15,11 +15,11 @@
                 <ScrollView Orientation="Horizontal" VerticalOptions="Start">
                     <StackLayout Orientation="Horizontal" VerticalOptions="Start">
                         <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
-                        HorizontalOptions="Center">
+                            HorizontalOptions="Center">
                             <Image Aspect="AspectFill" Source="userprofile2.png" />
                         </Frame>
                         <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
-                        HorizontalOptions="Center">
+                            HorizontalOptions="Center">
                             <Image Aspect="AspectFill" Source="userprofile3.png" />
                         </Frame>
                         <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
@@ -31,42 +31,48 @@
                             <Image Aspect="AspectFill" Source="userprofile5.png" />
                         </Frame>
                         <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
-                        HorizontalOptions="Center">
+                            HorizontalOptions="Center">
                             <Image Aspect="AspectFill" Source="userprofile2.png" />
                         </Frame>
                         <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
-                        HorizontalOptions="Center">
+                            HorizontalOptions="Center">
                             <Image Aspect="AspectFill" Source="userprofile3.png" />
                         </Frame>
                         <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
-                        HorizontalOptions="Center">
+                            HorizontalOptions="Center">
                             <Image Aspect="AspectFill" Source="userprofile4.png" />
                         </Frame>
                         <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
-                        HorizontalOptions="Center">
+                            HorizontalOptions="Center">
                             <Image Aspect="AspectFill" Source="userprofile5.png" />
                         </Frame>
                         <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
-                        HorizontalOptions="Center">
+                            HorizontalOptions="Center">
                             <Image Aspect="AspectFill" Source="userprofile2.png" />
                         </Frame>
                         <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
-                        HorizontalOptions="Center">
+                            HorizontalOptions="Center">
                             <Image Aspect="AspectFill" Source="userprofile3.png" />
                         </Frame>
                         <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
-                        HorizontalOptions="Center">
+                            HorizontalOptions="Center">
                             <Image Aspect="AspectFill" Source="userprofile4.png" />
                         </Frame>
                         <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
-                        HorizontalOptions="Center">
+                            HorizontalOptions="Center">
                             <Image Aspect="AspectFill" Source="userprofile5.png" />
                         </Frame>
 
                     </StackLayout>
                 </ScrollView>
                 <Label Text="I don't like any. I'll capture my own" HorizontalOptions="Center"></Label>
-                <Label Margin="20" FontFamily="{StaticResource material}" FontSize="Large" TextColor="{Binding AccentColor}" Text="{Binding CameraIcon}" HorizontalOptions="Center"></Label>
+                <Frame WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" HasShadow="True" CornerRadius="10" 
+                       BackgroundColor="{Binding LightPrimaryColor}">
+                    <Label HorizontalOptions="Center" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" 
+                           FontFamily="{StaticResource material}" FontSize="Large" TextColor="{Binding PrimaryTextColor}" 
+                           Text="{Binding CameraIcon}"></Label>    
+                </Frame>
+                
             </StackLayout>
             
             <StackLayout VerticalOptions="End">

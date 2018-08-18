@@ -18,7 +18,7 @@
                             Command="{Binding GotoLoginCommand}"></Button>                                       
                 </StackLayout>
 
-                <StackLayout Margin="10, 30, 10, 0">
+                <StackLayout Margin="10, 0">
                     <Label FontSize="Large" FontFamily="{StaticResource material}" 
                            Text="{Binding Header2Icon}" TextColor="{Binding AccentColor}"
                            HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"></Label>
@@ -27,7 +27,7 @@
                     <Label HorizontalTextAlignment="Center" FontSize="Small">Let others know about skills/speciality/area of expertize</Label>
                     <Label HorizontalTextAlignment="Center" FontSize="Micro">Bid-On-Task can help you find the jobs of your interest</Label>
                     <Label HorizontalTextAlignment="Center" FontSize="Micro">Tap the button below</Label>
-                    
+                    <Image Source="workers.png" HorizontalOptions="FillAndExpand"></Image>
                     <Button Text="Yes! I can work on tasks" BackgroundColor="{Binding DarkPrimaryColor}" Margin="20" WidthRequest="300"
                             Command="{Binding GotoWorkerProfileCommand}"></Button>
                 </StackLayout>

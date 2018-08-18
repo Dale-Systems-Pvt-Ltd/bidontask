@@ -4,6 +4,7 @@ using Prism.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
 namespace mobileapp.ViewModels
 {
@@ -18,7 +19,49 @@ namespace mobileapp.ViewModels
             set { SetProperty(ref darkPrimaryColor, value); }
         }
 
-        private Xamarin.Forms.Color accentColor = Xamarin.Forms.Color.FromHex("#536DFE");
+        private Color lightPrimaryColor = Color.FromHex("#B2DFDB");
+        public Color LightPrimaryColor
+        {
+            get { return lightPrimaryColor; }
+            set { SetProperty(ref lightPrimaryColor, value); }
+        }
+
+        private Color primaryColor = Color.FromHex("#009688");
+        public Color PrimaryColor
+        {
+            get { return primaryColor; }
+            set { SetProperty(ref primaryColor, value); }
+        }
+
+        private Color textIconColor = Color.FromHex("#FFFFFF");
+        public Color TextIconColor
+        {
+            get { return textIconColor; }
+            set { SetProperty(ref textIconColor, value); }
+        }
+
+        private Color primaryTextColor = Color.FromHex("#212121");
+        public Color PrimaryTextColor
+        {
+            get { return primaryTextColor; }
+            set { SetProperty(ref primaryTextColor, value); }
+        }
+
+        private Color secondaryTextColor = Color.FromHex("#757575");
+        public Color SecondaryTextColor
+        {
+            get { return secondaryTextColor; }
+            set { SetProperty(ref secondaryTextColor, value); }
+        }
+
+        private Color dividerColor = Color.FromHex("#757575");
+        public Color DividerColor
+        {
+            get { return dividerColor; }
+            set { SetProperty(ref dividerColor, value); }
+        }
+
+        private Xamarin.Forms.Color accentColor = Xamarin.Forms.Color.FromHex("#7C4DFF");
         public Xamarin.Forms.Color AccentColor
         {
             get { return accentColor; }
