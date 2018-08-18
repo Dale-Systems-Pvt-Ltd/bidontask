@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="mobileapp.Views.SetProfilePicture" Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand">
+                <Frame WidthRequest="200" HeightRequest="200" CornerRadius="50" Margin="30" Padding="0" IsClippedToBounds="True"
+                   HorizontalOptions="Center">
+                    <Image Aspect="AspectFill" Source="userprofile1.png" />
+                </Frame>
+                <Label HorizontalOptions="Center" Text="Select profile picture"></Label>
+                <ScrollView Orientation="Horizontal" VerticalOptions="Start">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+                        <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
+                        HorizontalOptions="Center">
+                            <Image Aspect="AspectFill" Source="userprofile2.png" />
+                        </Frame>
+                        <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
+                        HorizontalOptions="Center">
+                            <Image Aspect="AspectFill" Source="userprofile3.png" />
+                        </Frame>
+                        <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
+                        HorizontalOptions="Center">
+                            <Image Aspect="AspectFill" Source="userprofile4.png" />
+                        </Frame>
+                        <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
+                        HorizontalOptions="Center">
+                            <Image Aspect="AspectFill" Source="userprofile5.png" />
+                        </Frame>
+                        <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
+                        HorizontalOptions="Center">
+                            <Image Aspect="AspectFill" Source="userprofile2.png" />
+                        </Frame>
+                        <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
+                        HorizontalOptions="Center">
+                            <Image Aspect="AspectFill" Source="userprofile3.png" />
+                        </Frame>
+                        <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
+                        HorizontalOptions="Center">
+                            <Image Aspect="AspectFill" Source="userprofile4.png" />
+                        </Frame>
+                        <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
+                        HorizontalOptions="Center">
+                            <Image Aspect="AspectFill" Source="userprofile5.png" />
+                        </Frame>
+                        <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
+                        HorizontalOptions="Center">
+                            <Image Aspect="AspectFill" Source="userprofile2.png" />
+                        </Frame>
+                        <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
+                        HorizontalOptions="Center">
+                            <Image Aspect="AspectFill" Source="userprofile3.png" />
+                        </Frame>
+                        <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
+                        HorizontalOptions="Center">
+                            <Image Aspect="AspectFill" Source="userprofile4.png" />
+                        </Frame>
+                        <Frame WidthRequest="50" HeightRequest="50" CornerRadius="5" Margin="0" Padding="0" IsClippedToBounds="True"
+                        HorizontalOptions="Center">
+                            <Image Aspect="AspectFill" Source="userprofile5.png" />
+                        </Frame>
+
+                    </StackLayout>
+                </ScrollView>
+                <Label Text="I don't like any. I'll capture my own" HorizontalOptions="Center"></Label>
+                <Label Margin="20" FontFamily="{StaticResource material}" FontSize="Large" TextColor="{Binding AccentColor}" Text="{Binding CameraIcon}" HorizontalOptions="Center"></Label>
+            </StackLayout>
+            
+            <StackLayout VerticalOptions="End">
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="I'll set later" HorizontalOptions="FillAndExpand"></Button>
+                    <Button Text="Save and Next" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding DarkPrimaryColor}"
+                            Command="{Binding GotoRegistrationCompleteCommand}"></Button>
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

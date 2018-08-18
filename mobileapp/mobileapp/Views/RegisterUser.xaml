@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:controls="clr-namespace:mobileapp.Controls"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="mobileapp.Views.RegisterUser" Title="{Binding Title}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:Int32" x:Key="iconWidth">
+                <On Platform="Android" Value="75" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <StackLayout Margin="10, 30">
+                <Label HorizontalTextAlignment="Center" FontSize="Large">Welcome to BIDONTASK</Label>
+                <Label HorizontalTextAlignment="Center">BidOnTask team is excited to see you!</Label>
+                <Label HorizontalTextAlignment="Center" FontSize="Small">Please let us know about yourself</Label>
+            </StackLayout>
+            <ScrollView VerticalOptions="FillAndExpand">                
+                <StackLayout Margin="0, 10">
+                    <StackLayout Orientation="Horizontal" Margin="5">
+                        <StackLayout WidthRequest="75" HorizontalOptions="Start" VerticalOptions="Center">
+                            <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
+                                   VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                                   FontFamily="{StaticResource material}" FontSize="Large" 
+                                   Text="{Binding NameIcon}"></Label>
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Label FontSize="Micro" Text="{Binding FirstNameLabel}"></Label>
+                            <Entry Placeholder="First Name" Text="{Binding FirstName}"></Entry>
+                            <Label FontSize="Micro" Text="{Binding LastNameLabel}"></Label>
+                            <Entry Placeholder="Last Name" Text="{Binding LastName}"></Entry>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Margin="5">
+                        <StackLayout WidthRequest="75" HorizontalOptions="Start" VerticalOptions="Center">
+                            <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
+                                   VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                                   FontFamily="{StaticResource material}" FontSize="Large" 
+                                   Text="{Binding EmailIcon}"></Label>
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Label FontSize="Micro" Text="{Binding EmailLabel}"></Label>
+                            <Entry Placeholder="Email" Text="{Binding Email}"></Entry>
+                        </StackLayout>
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Horizontal" Margin="5">
+                        <StackLayout WidthRequest="75" HorizontalOptions="Start" VerticalOptions="Center">
+                            <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
+                                   VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                                   FontFamily="{StaticResource material}" FontSize="Large" 
+                                   Text="{Binding MobileIcon}"></Label>
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Label FontSize="Micro" Text="{Binding MobileLabel}"></Label>
+                            <Entry Placeholder="Mobile" Text="{Binding Mobile}"></Entry>
+                        </StackLayout>
+                    </StackLayout>
+
+
+
+                    <StackLayout Orientation="Horizontal"  Margin="5">
+                        <StackLayout WidthRequest="75" HorizontalOptions="Start" VerticalOptions="Center">
+                            <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
+                                   VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                                   FontFamily="{StaticResource material}" FontSize="Large" Text="{Binding AddressIcon}"></Label>        
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Label FontSize="Micro" Text="{Binding AdressLabel}"></Label>
+                            <Entry Placeholder="Location" Text="{Binding Address}"></Entry>
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout HorizontalOptions="FillAndExpand">
+                                    <Label FontSize="Micro" Text="{Binding CityLabel}"></Label>
+                                    <Entry Placeholder="City"></Entry>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="FillAndExpand">
+                                    <Label FontSize="Micro" Text="{Binding ZipCodeLabel}"></Label>
+                                    <Entry Placeholder="Zip code"></Entry>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout HorizontalOptions="FillAndExpand">
+                                    <Label FontSize="Micro" Text="{Binding StateLabel}"></Label>
+                                    <Entry Placeholder="State"></Entry>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="FillAndExpand">
+                                    <Label FontSize="Micro" Text="{Binding CountryLabel}"></Label>
+                                    <Entry Placeholder="Country"></Entry>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                    
+                    
+                </StackLayout>
+            </ScrollView>
+            <controls:HyperLinkLabel Text="Terms and Conditions" FontSize="Small" TextColor="Blue" Margin="10"
+                                     NavigateCommand="{Binding GotoTermsAndConditionsCommand}" 
+                                     HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand"></controls:HyperLinkLabel>
+            <Button Command="{Binding GotoSetupPasswordCommand}" VerticalOptions="End" Text="I agree Terms and Conditions" 
+                    BackgroundColor="{Binding DarkPrimaryColor}"></Button>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

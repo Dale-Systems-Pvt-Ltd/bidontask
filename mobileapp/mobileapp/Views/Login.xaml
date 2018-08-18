@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:controls="clr-namespace:mobileapp.Controls"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="mobileapp.Views.Login" BackgroundImage="todolist.png">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" WidthRequest="225" VerticalOptions="CenterAndExpand">
+            <Label FontSize="Large" HorizontalTextAlignment="Center" Margin="0, 50">BID ON TASK</Label>
+            <Entry Placeholder="Username" HorizontalTextAlignment="Center"></Entry>
+            <Entry Placeholder="Password" IsPassword="True" HorizontalTextAlignment="Center"></Entry>
+            <Button Text="Sign in" HorizontalOptions="Center" WidthRequest="100" BackgroundColor="{Binding DarkPrimaryColor}"></Button>
+            <StackLayout Orientation="Horizontal" Margin="0, 50" Padding="10">
+                <controls:HyperLinkLabel NavigateCommand="{Binding GotoForgotPasswordCommand}" 
+                                         Text="Forgot passoword?"
+                                         TextColor="{Binding AccentColor}}" HorizontalOptions="StartAndExpand"></controls:HyperLinkLabel>
+                <controls:HyperLinkLabel NavigateCommand="{Binding GotoRegisterUserCommand}" 
+                                         TextColor="{Binding AccentColor}"
+                                         Text="Register" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand"></controls:HyperLinkLabel>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+  
+</ContentPage>
