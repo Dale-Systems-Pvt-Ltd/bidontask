@@ -45,6 +45,8 @@ namespace mobileapp
             containerRegistry.RegisterForNavigation<Dashboard>();
 
             containerRegistry.RegisterForNavigation<PostATask>();
+            containerRegistry.RegisterForNavigation<MyTasks>();
+            containerRegistry.RegisterForNavigation<MyPostedTasks>();
         }
     }
 }

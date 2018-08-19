@@ -44,11 +44,11 @@
                         </StackLayout>
                         <StackLayout Padding="5, 15">
                             <StackLayout.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="Dashboard"></TapGestureRecognizer>
+                                <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="MyPostedTasks"></TapGestureRecognizer>
                             </StackLayout.GestureRecognizers>
                             <StackLayout Padding="20, 0, 10, 0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                                 <Label FontFamily="{StaticResource material}" Text="assignment" FontSize="30"></Label>
-                                <Label VerticalOptions="Center" InputTransparent="True" Text="My tasks" FontSize="Medium" 
+                                <Label VerticalOptions="Center" InputTransparent="True" Text="My posted tasks" FontSize="Medium" 
                                        HorizontalOptions="FillAndExpand"></Label>
                             </StackLayout>
                         </StackLayout>
@@ -59,6 +59,16 @@
                             <StackLayout Padding="20, 0, 10, 0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                                 <Label FontFamily="{StaticResource material}" Text="find_in_page" FontSize="30"></Label>
                                 <Label VerticalOptions="Center" InputTransparent="True" Text="Browse" FontSize="Medium" HorizontalOptions="FillAndExpand"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Padding="5, 15">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="MyTasks"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                            <StackLayout Padding="20, 0, 10, 0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label FontFamily="{StaticResource material}" Text="assignment" FontSize="30"></Label>
+                                <Label VerticalOptions="Center" InputTransparent="True" Text="My tasks" FontSize="Medium" 
+                                       HorizontalOptions="FillAndExpand"></Label>
                             </StackLayout>
                         </StackLayout>
                         <StackLayout Padding="5, 15">

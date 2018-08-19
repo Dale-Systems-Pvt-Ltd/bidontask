@@ -5,7 +5,7 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="mobileapp.Views.SetProfilePicture" Title="{Binding Title}">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="10">
             <StackLayout VerticalOptions="FillAndExpand">
                 <Frame WidthRequest="200" HeightRequest="200" CornerRadius="50" Margin="30" Padding="0" IsClippedToBounds="True"
                    HorizontalOptions="Center">
@@ -77,7 +77,7 @@
             
             <StackLayout VerticalOptions="End">
                 <StackLayout Orientation="Horizontal">
-                    <Button Text="I'll set later" HorizontalOptions="FillAndExpand"></Button>
+                    <Button Text="I'll set later" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding DividerColor}"></Button>
                     <Button Text="Save and Next" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding DarkPrimaryColor}"
                             Command="{Binding GotoRegistrationCompleteCommand}"></Button>
                 </StackLayout>
