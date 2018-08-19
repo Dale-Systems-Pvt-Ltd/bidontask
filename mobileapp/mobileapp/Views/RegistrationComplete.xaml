@@ -7,14 +7,15 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout VerticalOptions="FillAndExpand">
-                <StackLayout Margin="10, 30">
-                    <Label FontSize="Large" FontFamily="{StaticResource material}" 
+                <StackLayout Margin="10, 20">
+                    <!--<Label FontSize="Large" FontFamily="{StaticResource material}" 
                            Text="{Binding HeaderIcon}" TextColor="{Binding AccentColor}"
-                           HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"></Label>
+                           HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand"></Label>-->
+                    <Image Source="congratulations.png" WidthRequest="60" HeightRequest="55" HorizontalOptions="Center"></Image>
                     <Label HorizontalTextAlignment="Center" FontSize="Large">Congratulations</Label>
                     <Label HorizontalTextAlignment="Center">You are now ready to post your tasks and get best offers from vendors</Label>
 
-                    <Button Text="Sign In" BackgroundColor="{Binding DarkPrimaryColor}" Margin="20" WidthRequest="300"
+                    <Button Text="Sign In" BackgroundColor="{Binding DarkPrimaryColor}" Margin="20, 10" WidthRequest="300"
                             Command="{Binding GotoLoginCommand}"></Button>                                       
                 </StackLayout>
 
@@ -27,9 +28,9 @@
                     <Label HorizontalTextAlignment="Center" FontSize="Small">Let others know about skills/speciality/area of expertize</Label>
                     <Label HorizontalTextAlignment="Center" FontSize="Micro">Bid-On-Task can help you find the jobs of your interest</Label>
                     <Label HorizontalTextAlignment="Center" FontSize="Micro">Tap the button below</Label>
-                    <Image Source="workers.png" HorizontalOptions="FillAndExpand"></Image>
-                    <Button Text="Yes! I can work on tasks" BackgroundColor="{Binding DarkPrimaryColor}" Margin="20" WidthRequest="300"
+                    <Button Text="Yes! I can work on tasks" BackgroundColor="{Binding DarkPrimaryColor}" Margin="20, 10" WidthRequest="300"
                             Command="{Binding GotoWorkerProfileCommand}"></Button>
+                    <Image Source="workers.png" HorizontalOptions="FillAndExpand" VerticalOptions="End"></Image>                    
                 </StackLayout>
             </StackLayout>
         </StackLayout>

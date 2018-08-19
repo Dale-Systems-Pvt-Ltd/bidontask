@@ -43,7 +43,8 @@ namespace mobileapp
             containerRegistry.RegisterForNavigation<WorkerProfile>();
             containerRegistry.RegisterForNavigation<MastDetail>();
             containerRegistry.RegisterForNavigation<Dashboard>();
-            
+
+            containerRegistry.RegisterForNavigation<PostATask>();
         }
     }
 }

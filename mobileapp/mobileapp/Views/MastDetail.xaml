@@ -14,6 +14,12 @@
                            HorizontalOptions="Start" VerticalOptions="Center" Margin="10" IsClippedToBounds="True">
                         <Image Source="userprofile.png" Aspect="AspectFill"></Image>
                     </Frame>
+                    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Margin="10">
+                        <Label Text="John Wallace" FontSize="Large"></Label>
+                        <Label Text="430, Eglinton West, Toronta, ON" FontSize="Small"></Label>
+                        
+                    </StackLayout>
+                    <Image WidthRequest="60" Source="frogonmenu.png" HeightRequest="51" HorizontalOptions="End" VerticalOptions="End"></Image>
                 </Grid>
                 
                 <ScrollView>
@@ -29,7 +35,7 @@
                         </StackLayout>
                         <StackLayout Padding="5, 15">
                             <StackLayout.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="Dashboard"></TapGestureRecognizer>
+                                <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="PostATask"></TapGestureRecognizer>
                             </StackLayout.GestureRecognizers>
                             <StackLayout Padding="20, 0, 10, 0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                                 <Label FontFamily="{StaticResource material}" Text="note_add" FontSize="30"></Label>
@@ -64,6 +70,17 @@
                                 <Label VerticalOptions="Center" InputTransparent="True" Text="Messages" FontSize="Medium" HorizontalOptions="FillAndExpand"></Label>
                             </StackLayout>
                         </StackLayout>
+
+                        <StackLayout Padding="5, 15">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="MyBadges"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                            <StackLayout Padding="20, 0, 10, 0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label FontFamily="{StaticResource material}" Text="security" FontSize="30"></Label>
+                                <Label VerticalOptions="Center" InputTransparent="True" Text="My Badges" FontSize="Medium" HorizontalOptions="FillAndExpand"></Label>
+                            </StackLayout>
+                        </StackLayout>
+
                         <StackLayout Padding="5, 15">
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="Dashboard"></TapGestureRecognizer>
@@ -73,15 +90,8 @@
                                 <Label VerticalOptions="Center" InputTransparent="True" Text="Settings" FontSize="Medium" HorizontalOptions="FillAndExpand"></Label>
                             </StackLayout>
                         </StackLayout>
-                        <StackLayout Padding="5, 15">
-                            <StackLayout.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="ForgotPassword"></TapGestureRecognizer>
-                            </StackLayout.GestureRecognizers>
-                            <StackLayout Padding="20, 0, 10, 0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                                <Label FontFamily="{StaticResource material}" Text="security" FontSize="30"></Label>
-                                <Label VerticalOptions="Center" InputTransparent="True" Text="Forgot Password" FontSize="Medium" HorizontalOptions="FillAndExpand"></Label>
-                            </StackLayout>
-                        </StackLayout>
+                        
+                        
                         <StackLayout Padding="5, 15">
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="Login"></TapGestureRecognizer>

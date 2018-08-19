@@ -65,9 +65,9 @@
 
                     </StackLayout>
                 </ScrollView>
-                <Label Text="I don't like any. I'll capture my own" HorizontalOptions="Center"></Label>
+                <Label Margin="0, 30, 0, 15" Text="I don't like any of above. I'll capture my own" HorizontalOptions="Center"></Label>
                 <Frame WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" HasShadow="True" CornerRadius="10" 
-                       BackgroundColor="{Binding LightPrimaryColor}">
+                       BackgroundColor="{Binding LightPrimaryColor}" BorderColor="Black">
                     <Label HorizontalOptions="Center" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" 
                            FontFamily="{StaticResource material}" FontSize="Large" TextColor="{Binding PrimaryTextColor}" 
                            Text="{Binding CameraIcon}"></Label>    

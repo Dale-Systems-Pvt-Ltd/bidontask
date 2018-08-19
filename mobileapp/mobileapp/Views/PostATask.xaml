@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="mobileapp.Views.PostATask" Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout Padding="2">
+                    <Frame HasShadow="True" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Label Text="Address" FontSize="Micro"></Label>
+                                <Label Text="2322, St. Clair West Village"></Label>
+                                <Label Text="Toronto, ON"></Label>
+                            </StackLayout>
+                            <Label FontFamily="{StaticResource material}" Text="navigate_next" FontSize="Large"
+                           VerticalOptions="Center" HorizontalOptions="End"></Label>
+
+                        </StackLayout>
+                    </Frame>
+                    <Frame HasShadow="True">                        
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Label Text="Task description" FontSize="Micro"></Label>
+                            <Editor AutoSize="TextChanges" Placeholder="Enter detailed description of the task"></Editor>
+                        </StackLayout>                        
+                    </Frame>
+
+                    <Frame HasShadow="True">
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Label Text="Images" FontSize="Micro"></Label>
+                            <Label Text="An image is worth thousand words"></Label>                            
+                            <StackLayout Orientation="Horizontal">
+                                <Frame Padding="0" WidthRequest="70" HeightRequest="50" BorderColor="{Binding DividerColor}">
+                                    <Label HorizontalOptions="Center" VerticalOptions="Center" 
+                                           FontFamily="{StaticResource material}" Text="add_a_photo"></Label>
+                                </Frame>
+                                <Frame HeightRequest="70" Padding="0">
+                                    <Image VerticalOptions="FillAndExpand" Aspect="AspectFill" Source="work6.jpg"></Image>
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame HasShadow="True" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Label Text="Search tags" FontSize="Micro"></Label>
+                                <Label Text="Search tags help bidders to find your task quickly"></Label>
+                                <Label Text="Tap here to add some search tags"></Label>
+                            </StackLayout>
+                            <Label FontFamily="{StaticResource material}" Text="navigate_next" FontSize="Large"
+                           VerticalOptions="Center" HorizontalOptions="End"></Label>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame HasShadow="True" HorizontalOptions="FillAndExpand">
+                        <StackLayout>
+                            <Label Text="Max Budget" FontSize="Micro"></Label>
+                            <StackLayout Orientation="Horizontal">
+                                <Label FontFamily="{StaticResource material}" Text="attach_money" FontSize="Large"
+                                       HorizontalOptions="Start" VerticalOptions="Center" VerticalTextAlignment="Center"></Label>
+                                <Entry Placeholder="Enter budget" WidthRequest="200" HorizontalOptions="Start"></Entry>
+                                <Label FontFamily="{StaticResource material}" Text="check_box" FontSize="Large"
+                                       HorizontalOptions="Start" VerticalOptions="Center" VerticalTextAlignment="Center"></Label>
+                                <Label Text="Show to bidders" 
+                                       HorizontalOptions="FillAndExpand" VerticalOptions="Center" VerticalTextAlignment="Center"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame  HasShadow="True">
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Label Text="Urgency level" FontSize="Micro"></Label>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label FontFamily="{StaticResource material}" Text="check_box_outline_blank" HorizontalOptions="Start"></Label>
+                                        <Label Text="Critical" HorizontalOptions="FillAndExpand"></Label>
+                                    </StackLayout>                                    
+                                </Frame>
+
+                                <Frame>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label FontFamily="{StaticResource material}" Text="check_box" HorizontalOptions="Start"></Label>
+                                        <Label Text="High" HorizontalOptions="FillAndExpand"></Label>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label FontFamily="{StaticResource material}" Text="check_box_outline_blank" HorizontalOptions="Start"></Label>
+                                        <Label Text="Normal" HorizontalOptions="FillAndExpand"></Label>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Save Draft" BackgroundColor="{Binding DividerColor}"
+                        VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Post Task" BackgroundColor="{Binding DarkPrimaryColor}" 
+                        VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
