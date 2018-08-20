@@ -48,6 +48,18 @@
                             </StackLayout>
                         </StackLayout>
                     </Frame>
+
+                    <Frame HasShadow="True" CornerRadius="5">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Label Text="Service Areas"></Label>
+                                <Label Text="York University, Black Creek Pioneer Village, Jane and Finch" FontSize="Micro"></Label>                                
+                            </StackLayout>
+                            <Label FontFamily="{StaticResource material}" FontSize="Large" VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" 
+                                Text="{Binding NavigateNextIcon}"></Label>
+                        </StackLayout>
+                    </Frame>
+
                     <Frame HasShadow="True" CornerRadius="5">
                         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                             <StackLayout HorizontalOptions="FillAndExpand">

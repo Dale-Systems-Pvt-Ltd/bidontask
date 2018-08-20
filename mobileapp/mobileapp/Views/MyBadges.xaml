@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="mobileapp.Views.MyBadges" Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" Padding="10">
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout>
+                    <Label VerticalOptions="Center" HorizontalOptions="CenterAndExpand" IsVisible="{Binding ShowNoDataMessage}" Text="You do not have any badge earned yet"></Label>
+                    <ListView VerticalOptions="FillAndExpand" ItemsSource="{Binding ItemsSource}" HasUnevenRows="True" SeparatorVisibility="Default">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Margin="0, 5">
+                                        <Frame WidthRequest="50" MinimumWidthRequest="50" HeightRequest="50" CornerRadius="25" BackgroundColor="{StaticResource LightPrimaryColor}" BorderColor="{StaticResource DarkPrimaryColor}"
+                                               Margin="0" Padding="0" HorizontalOptions="Start" VerticalOptions="Center">
+                                            <Label VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center"
+                                               FontFamily="{StaticResource material}" Text="{Binding Icon}" TextColor="{StaticResource AccentColor}" FontSize="Large"></Label>                                            
+                                        </Frame>
+                                        <StackLayout Margin="5" HorizontalOptions="StartAndExpand">
+                                            <Label Text="{Binding Name}" TextColor="{Binding PrimaryTextColor}"></Label>
+                                            <Label Text="{Binding Details}" FontSize="Micro" TextColor="{Binding SecondaryTextColor}"></Label>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+
+
+            </ScrollView>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
