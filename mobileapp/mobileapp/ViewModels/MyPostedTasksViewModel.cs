@@ -42,8 +42,8 @@ namespace mobileapp.ViewModels
             {
                 Id = 1,
                 Name = "Bathtub faucet leakage",
-                Offers = "Budget: $50 Min Offer: $35 Max Offer: $100",
-                NoOfOffers = "2 Offers",
+                Offers = "Budget: c$50",
+                NoOfOffers = "",
                 ProfileImage = "work6.jpg",
                 Status = "Draft"
             });
@@ -53,7 +53,7 @@ namespace mobileapp.ViewModels
                 Id = 2,
                 Name = "Shelvinng/cabinetry for 2 closets",
                 NoOfOffers = "1 Offers",
-                Offers = "Budget: $350 Min Offer: $500",
+                Offers = "Budget: c$350 Min Offer: c$500",
                 ProfileImage = "work3.jpg",
                 Status = "Open for bidding"
             });
