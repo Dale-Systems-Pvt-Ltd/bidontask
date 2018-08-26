@@ -11,19 +11,19 @@ namespace mobileapp.ViewModels
 	public class RegisterUserConfirmMobileViewModel : ViewModelBase
 	{
         private User user;
-        public DelegateCommand GotoSetProfilePictureCommand { get; }
+        public DelegateCommand GotoRegistrationCompleteCommand { get; }
         public RegisterUserConfirmMobileViewModel(INavigationService navigationService): base(navigationService)
         {
 
             Title = "Verify Mobile Number";
-            GotoSetProfilePictureCommand = new DelegateCommand(GotoSetProfilePicture);
+            GotoRegistrationCompleteCommand = new DelegateCommand(GotoRegistrationComplete);
         }
 
-        private async void GotoSetProfilePicture()
+        private async void GotoRegistrationComplete()
         {
             var parameters = new NavigationParameters();
             parameters.Add("User", user);
-            await NavigationService.NavigateAsync("SetProfilePicture", parameters);
+            await NavigationService.NavigateAsync("RegistrationComplete", parameters);
         }
 
 

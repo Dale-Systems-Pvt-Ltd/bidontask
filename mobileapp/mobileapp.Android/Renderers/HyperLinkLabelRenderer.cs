@@ -34,10 +34,15 @@ namespace mobileapp.Droid.Renderers
 
             if (e.OldElement == null)
             {
+                try
+                {
+                    var nativeEditText = (global::Android.Widget.TextView)Control;
 
-                var nativeEditText = (global::Android.Widget.TextView)Control;
+                    Linkify.AddLinks(nativeEditText, MatchOptions.All);
+                }
+                catch { }
 
-                Linkify.AddLinks(nativeEditText, MatchOptions.All);
+                
             }
         }
     }

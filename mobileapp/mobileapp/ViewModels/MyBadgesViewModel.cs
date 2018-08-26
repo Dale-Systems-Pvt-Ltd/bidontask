@@ -43,7 +43,7 @@ namespace mobileapp.ViewModels
             ReadBadgesData();
             if (ItemsSource.Count > 0) ShowNoDataMessage = false;
 
-            await CrossPayPalManager.Current.AuthorizeProfileSharing();
+            //await CrossPayPalManager.Current.AuthorizeProfileSharing();
             
             var result = await CrossPayPalManager.Current.Buy(new PayPalItem("Shelving/cabinetry for 2 closets", new Decimal(50), "CAD"), new Decimal(0));
             if (result.Status == PayPalStatus.Cancelled)

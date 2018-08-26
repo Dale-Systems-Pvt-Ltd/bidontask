@@ -9,7 +9,7 @@ using Prism.Ioc;
 
 namespace mobileapp.Droid
 {
-    [Activity(Label = "mobileapp", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Bid On Task", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -61,7 +61,7 @@ namespace mobileapp.Droid
         protected override void OnDestroy()
         {
             base.OnDestroy();
-            PayPalManagerImplementation.Manager.Destroy();
+            if(PayPalManagerImplementation.Manager != null) PayPalManagerImplementation.Manager.Destroy();
         }
     }
 

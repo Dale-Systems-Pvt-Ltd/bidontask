@@ -26,7 +26,7 @@
                 <StackLayout Orientation="Horizontal">
                     <Button Text="Skip Verification" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding DividerColor}"></Button>
                     <Button Text="Next" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding DarkPrimaryColor}"
-                            Command="{Binding GotoSetProfilePictureCommand}"></Button>
+                            Command="{Binding GotoRegistrationCompleteCommand}"></Button>
                 </StackLayout>
             </StackLayout>
         </StackLayout>

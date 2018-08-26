@@ -15,6 +15,7 @@
             <Color x:Key="SecondaryTextColor">#757575</Color>
             <Color x:Key="LightPrimaryColor">#B2DFDB</Color>
             <Color x:Key="DarkPrimaryColor">#00796B</Color>
+            <Color x:Key="TextIconColor">#FFFFFF</Color>
         </ResourceDictionary>
 
     </Application.Resources>
