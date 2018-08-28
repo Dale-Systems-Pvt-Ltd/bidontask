@@ -2,8 +2,10 @@
 using Android.Content;
 using Android.Content.PM;
 using Android.OS;
+using Android.Runtime;
 using PayPal.Forms;
 using PayPal.Forms.Abstractions;
+using Plugin.Permissions;
 using Prism;
 using Prism.Ioc;
 
@@ -40,9 +42,9 @@ namespace mobileapp.Droid
                 PhoneCountryCode = "1",
                 
             };
-            
-            
 
+
+            Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, bundle);
             CrossPayPalManager.Init(config, this);
             Xamarin.FormsMaps.Init(this, bundle);
             LoadApplication(new App(new AndroidInitializer()));
@@ -56,7 +58,11 @@ namespace mobileapp.Droid
             PayPalManagerImplementation.Manager.OnActivityResult(requestCode, resultCode, data);
         }
 
-        
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
+        {
+            PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
 
         protected override void OnDestroy()
         {

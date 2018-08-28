@@ -5,6 +5,7 @@ using mobileapp.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Prism.Autofac;
+using mobileapp.Repo;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace mobileapp
@@ -29,6 +30,8 @@ namespace mobileapp
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.Register<IJobRepo, JobRepo>();
+
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
             containerRegistry.RegisterForNavigation<Login>();
@@ -48,6 +51,7 @@ namespace mobileapp
             containerRegistry.RegisterForNavigation<MyTasks>();
             containerRegistry.RegisterForNavigation<MyPostedTasks>();
             containerRegistry.RegisterForNavigation<MyBadges>();
+            containerRegistry.RegisterForNavigation<BrowseTasksOnMap>();
         }
     }
 }

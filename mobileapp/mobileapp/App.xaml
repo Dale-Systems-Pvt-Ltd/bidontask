@@ -9,13 +9,14 @@
             <OnPlatform x:TypeArguments="x:String" x:Key="material">
                 <On Platform="Android" Value="iconize-material.ttf#Open Sans" />                                
             </OnPlatform>
-            <Color x:Key="DividerColor">#757575</Color>
-            <Color x:Key="AccentColor">#7C4DFF</Color>
+            <Color x:Key="DarkPrimaryColor">#00796B</Color>
+            <Color x:Key="LightPrimaryColor">#B2DFDB</Color>
+            <Color x:Key="PrimaryColor">#009688</Color>            
+            <Color x:Key="TextIconColor">#FFFFFF</Color>
+            <Color x:Key="AccentColor">#FF9800</Color>
             <Color x:Key="PrimaryTextColor">#212121</Color>
             <Color x:Key="SecondaryTextColor">#757575</Color>
-            <Color x:Key="LightPrimaryColor">#B2DFDB</Color>
-            <Color x:Key="DarkPrimaryColor">#00796B</Color>
-            <Color x:Key="TextIconColor">#FFFFFF</Color>
+            <Color x:Key="DividerColor">#BDBDBD</Color>
         </ResourceDictionary>
 
     </Application.Resources>

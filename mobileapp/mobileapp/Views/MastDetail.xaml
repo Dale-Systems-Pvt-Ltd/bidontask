@@ -30,7 +30,7 @@
                                HorizontalOptions="Center"
                                 Margin="0" Padding="0" VerticalOptions="Center" WidthRequest="40"  >
                             <Label  FontFamily="{StaticResource material}"
-                            FontSize="Large" HorizontalOptions="Center" Margin="0" Text="dashboard" TextColor="{StaticResource TextIconColor}" VerticalOptions="Center"></Label>    
+                            FontSize="Large" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0" Text="dashboard" TextColor="{StaticResource TextIconColor}" VerticalOptions="Center"></Label>    
                         </Frame>
                         
 
@@ -82,7 +82,7 @@
                             </StackLayout>-->
                             <StackLayout Padding="5, 15">
                                 <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="Dashboard"></TapGestureRecognizer>
+                                    <TapGestureRecognizer Command="{Binding NavigateCommand}" CommandParameter="BrowseTasksOnMap"></TapGestureRecognizer>
                                 </StackLayout.GestureRecognizers>
                                 <StackLayout Padding="20, 0, 10, 0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                                     <Label FontFamily="{StaticResource material}" Text="find_in_page" FontSize="30"></Label>

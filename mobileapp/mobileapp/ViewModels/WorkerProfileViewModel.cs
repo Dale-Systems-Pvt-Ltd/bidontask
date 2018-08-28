@@ -10,7 +10,7 @@ namespace mobileapp.ViewModels
 {
 	public class WorkerProfileViewModel : ViewModelBase
 	{
-        private User user;
+        private  User user;
         public DelegateCommand GotoLoginCommand { get; }
         public WorkerProfileViewModel(INavigationService navigationService) : base(navigationService)
         {
